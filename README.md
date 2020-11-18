@@ -129,7 +129,8 @@ repeat the name of an action three times: one in the type enum declaration,
 another in the actual type string literal, then one more in the action variable
 name.
 
-The final version of the library API will resemble some form like this:
+The final version of the library API, still work-in-progress, will resemble some 
+form like this:
 
 ```ts
 export const actions = ActionMap({
@@ -162,7 +163,7 @@ dispatch(
     newTodo: {
       content: "add docs for better-use-reducer",
     },
-    parent: '3127',
+    parentId: '3127',
   })
 );
 ```
