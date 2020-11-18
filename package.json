@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vic-lee/better-use-reducer.git"
+    "url": "git+https://github.com/vic-lee/use-reducer-toolkit.git"
   },
   "keywords": [
     "react"
@@ -16,9 +16,9 @@
   "author": "vic-lee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vic-lee/better-use-reducer/issues"
+    "url": "https://github.com/vic-lee/use-reducer-toolkit/issues"
   },
-  "homepage": "https://github.com/vic-lee/better-use-reducer#readme",
+  "homepage": "https://github.com/vic-lee/use-reducer-toolkit#readme",
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "jest": "^26.6.3",
