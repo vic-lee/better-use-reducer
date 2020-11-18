@@ -1,1 +1,1 @@
-export * from "./better-use-reducer";
+export * from "./action-creator";

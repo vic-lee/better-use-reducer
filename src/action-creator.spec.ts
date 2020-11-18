@@ -1,6 +1,6 @@
-import { Action, payload } from "./better-use-reducer";
+import { Action, payload } from "./action-creator";
 
-describe("use-reducer-helpers", () => {
+describe("action-creator", () => {
   describe("Action", () => {
     const testType = "test_action_name";
 
