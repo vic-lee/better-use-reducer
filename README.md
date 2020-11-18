@@ -77,9 +77,9 @@ also becomes considerably longer. It will become increasingly hard to:
 
 ## The solution, v0.1
 
-This library contains helper functions to organize actions in a larger reducer.
-By introducing a more streamlined way to declare an action, the library helps
-`useReducer` users avoid TypeScript fatigue.
+This library introduces an opinionated way to create and organize actions.
+Instead of using one type to organize all action type variants, it stores each
+action creator as a discrete funciton.
 
 ```ts
 enum TodoActionTypes {
@@ -120,7 +120,15 @@ const nestTodoUnderNewParent = Action(
 const rescheduleTomorrow = Action(TodoActionTypes.RescheduleTomorrow);
 const rescheduleOneWeekLater = Action(TodoActionTypes.RescheduleOneWeekLater);
 const rescheduleOneMonthLater = Action(TodoActionTypes.RescheduleOneMonthLater);
+
+// Then, one could dispatch an action like so:
+dispatch(deleteTodo({ todoId: '3' }));
 ```
+
+The API for this library's action creators is heavily inspired by:
+
+- `createAction` from [NgRx](https://ngrx.io/api/store/createAction)
+- `createAction` from [Redux ToolKit](https://redux-toolkit.js.org/api/createAction)
 
 ## Solution, v1
 
@@ -129,9 +137,11 @@ repeat the name of an action three times: one in the type enum declaration,
 another in the actual type string literal, then one more in the action variable
 name.
 
-The final version of the library API will resemble some form like this:
+The final version of the library API, still work-in-progress, will resemble some 
+form like this:
 
 ```ts
+// action type literals are automatically inferred from the keys used in `ActionMap`
 export const actions = ActionMap({
   addTodo: payload<{
     newTodo: Omit<Todo, "id | priority | children"> & {
@@ -162,7 +172,7 @@ dispatch(
     newTodo: {
       content: "add docs for better-use-reducer",
     },
-    parent: '3127',
+    parentId: '3127',
   })
 );
 ```
