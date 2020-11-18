@@ -1,5 +1,5 @@
 {
-  "name": "better-use-reducer",
+  "name": "use-reducer-toolkit",
   "version": "0.1.0",
   "description": "Utility functions that make using useReducer more ergonomic.",
   "main": "index.js",

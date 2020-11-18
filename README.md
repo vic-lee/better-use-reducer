@@ -1,4 +1,4 @@
-# better-use-reducer
+# use-reducer-toolkit
 
 Consider if you're writing a module for image navigation. For `useReducer` users
 experienced in TypeScript, the following pattern should look pretty familiar:
